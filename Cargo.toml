@@ -1,0 +1,17 @@
+[workspace]
+members = [
+    "imhamt",
+    "chain-ser",
+    "chain-core",
+    "chain-addr",
+    "chain-time",
+    "chain-crypto",
+    "chain-network",
+    "chain-storage",
+    "chain-test-utils",
+    "chain-impl-mockchain",
+    "cardano-legacy-address",
+    "sparse-array",
+    "typed-bytes",
+    "btree",
+]

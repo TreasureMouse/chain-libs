@@ -1,0 +1,33 @@
+[package]
+name = "chain-network"
+version = "0.1.0"
+authors = ["Mikhail Zabaluev <mikhail.zabaluev@iohk.io>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+async-trait = "0.1"
+futures = "0.3"
+pin-project = "0.4"
+prost = "0.6"
+rand_core = { version = "0.5", optional = true }
+thiserror = "1.0"
+
+[dependencies.tonic]
+version = "0.3"
+default-features = false
+features = ["codegen", "prost"]
+
+[dev-dependencies]
+rand = "0.7"
+
+[build-dependencies.tonic-build]
+version = "0.3"
+default-features = false
+features = ["prost"]
+
+[features]
+default = ["transport", "legacy"]
+transport = ["tonic/transport", "tonic-build/transport"]
+legacy = ["rand_core"]
+codegen-rustfmt = ["tonic-build/rustfmt"]

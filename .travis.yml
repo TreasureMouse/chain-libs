@@ -1,0 +1,12 @@
+language: rust
+cache: cargo
+matrix:
+  include:
+#    - rust: stable
+#      os: windows
+    - rust: stable
+      os: osx
+  allow_failures:
+#    - rust: stable
+#      os: windows
+
